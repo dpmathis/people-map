@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { Person } from "@/data/people";
 
@@ -8,8 +9,28 @@ interface PersonDetailProps {
   onClose: () => void;
 }
 
+// Get initials from a name (e.g., "John Smith" -> "JS")
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
+}
+
+// Check if photo is a placeholder
+function isPlaceholderPhoto(photoUrl: string): boolean {
+  return !photoUrl || photoUrl.includes("placeholder");
+}
+
 export default function PersonDetail({ person, onClose }: PersonDetailProps) {
+  const [imageError, setImageError] = useState(false);
+
   if (!person) return null;
+
+  const showInitials = isPlaceholderPhoto(person.photo) || imageError;
+  const initials = getInitials(person.name);
 
   return (
     <div
@@ -45,14 +66,29 @@ export default function PersonDetail({ person, onClose }: PersonDetailProps) {
           </svg>
         </button>
 
-        {/* Photo */}
+        {/* Photo or Initials */}
         <div className="w-full h-48 relative" style={{ background: 'var(--cream)' }}>
-          <Image
-            src={person.photo}
-            alt={person.name}
-            fill
-            className="object-cover"
-          />
+          {showInitials ? (
+            <div
+              className="w-full h-full flex items-center justify-center"
+              style={{ background: 'var(--navy)' }}
+            >
+              <span
+                className="text-5xl font-bold"
+                style={{ color: 'var(--white)' }}
+              >
+                {initials}
+              </span>
+            </div>
+          ) : (
+            <Image
+              src={person.photo}
+              alt={person.name}
+              fill
+              className="object-cover"
+              onError={() => setImageError(true)}
+            />
+          )}
         </div>
       </div>
 

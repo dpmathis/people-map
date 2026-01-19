@@ -12,13 +12,52 @@ interface MapProps {
   selectedPerson: Person | null;
 }
 
-// Create a custom icon for each person's photo
-function createPhotoIcon(photoUrl: string, isSelected: boolean) {
+// Get initials from a name (e.g., "John Smith" -> "JS")
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
+}
+
+// Check if photo is a placeholder or likely missing
+function isPlaceholderPhoto(photoUrl: string): boolean {
+  return !photoUrl || photoUrl.includes("placeholder");
+}
+
+// Create a custom icon for each person's photo or initials
+function createPhotoIcon(photoUrl: string, name: string, isSelected: boolean) {
+  const initials = getInitials(name);
+  const isPlaceholder = isPlaceholderPhoto(photoUrl);
+
+  if (isPlaceholder) {
+    // Show initials instead of placeholder
+    return L.divIcon({
+      className: "custom-marker",
+      html: `
+        <div class="marker-container marker-initials ${isSelected ? "selected" : ""}">
+          <span class="initials">${initials}</span>
+        </div>
+      `,
+      iconSize: [50, 50],
+      iconAnchor: [25, 50],
+      popupAnchor: [0, -50],
+    });
+  }
+
+  // Show photo with fallback to initials on error
   return L.divIcon({
     className: "custom-marker",
     html: `
       <div class="marker-container ${isSelected ? "selected" : ""}">
-        <img src="${photoUrl}" alt="Person" />
+        <img
+          src="${photoUrl}"
+          alt="${name}"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <span class="initials-fallback" style="display:none;">${initials}</span>
       </div>
     `,
     iconSize: [50, 50],
@@ -90,6 +129,25 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           height: 100%;
           object-fit: cover;
         }
+        .marker-container.marker-initials {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #0E2344;
+        }
+        .marker-container .initials,
+        .marker-container .initials-fallback {
+          color: #FFFFFF;
+          font-weight: 700;
+          font-size: 16px;
+          font-family: "Nunito Sans", Arial, sans-serif;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #0E2344;
+        }
         .leaflet-popup-content-wrapper {
           border-radius: 0;
           border: 1px solid rgba(14, 35, 68, 0.12);
@@ -120,7 +178,7 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           <Marker
             key={person.id}
             position={[person.lat, person.lng]}
-            icon={createPhotoIcon(person.photo, selectedPerson?.id === person.id)}
+            icon={createPhotoIcon(person.photo, person.name, selectedPerson?.id === person.id)}
             eventHandlers={{
               click: () => onPersonClick(person),
             }}
