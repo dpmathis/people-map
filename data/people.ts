@@ -1,3 +1,5 @@
+export type PersonStatus = 'Incumbent' | 'Challenger';
+
 export interface Person {
   id: string;
   name: string;
@@ -9,6 +11,7 @@ export interface Person {
   bio: string;
   email?: string;
   location: string;
+  status: PersonStatus;
 }
 
 export const people: Person[] = [
@@ -28,7 +31,8 @@ export const people: Person[] = [
     ],
     "title": "Attorney General",
     "bio": "Kris works tirelessly as Attorney General to protect democratic norms and expand civic participation.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Incumbent"
   },
   {
     "id": "2",
@@ -46,7 +50,8 @@ export const people: Person[] = [
     ],
     "title": "Attorney General",
     "bio": "Serving California as Attorney General, Rob champions democratic values and good governance.",
-    "location": "Sacramento, CA"
+    "location": "Sacramento, CA",
+    "status": "Incumbent"
   },
   {
     "id": "3",
@@ -64,7 +69,8 @@ export const people: Person[] = [
     ],
     "title": "Attorney General",
     "bio": "Serving New York as Attorney General, Letitia champions democratic values and good governance.",
-    "location": "Albany, NY"
+    "location": "Albany, NY",
+    "status": "Incumbent"
   },
   {
     "id": "4",
@@ -82,7 +88,8 @@ export const people: Person[] = [
     ],
     "title": "Attorney General",
     "bio": "Josh serves as Attorney General for Wisconsin, working to strengthen democratic institutions and civic engagement.",
-    "location": "Madison, WI"
+    "location": "Madison, WI",
+    "status": "Incumbent"
   },
   {
     "id": "5",
@@ -100,7 +107,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Katie works tirelessly as Governor to protect democratic norms and expand civic participation.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Incumbent"
   },
   {
     "id": "6",
@@ -118,7 +126,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Serving Colorado as Governor, Michael champions democratic values and good governance.",
-    "location": "Denver, CO"
+    "location": "Denver, CO",
+    "status": "Challenger"
   },
   {
     "id": "7",
@@ -136,7 +145,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Ned serves as Governor for Connecticut, working to strengthen democratic institutions and civic engagement.",
-    "location": "Hartford, CT"
+    "location": "Hartford, CT",
+    "status": "Incumbent"
   },
   {
     "id": "8",
@@ -154,7 +164,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "JP works tirelessly as Governor to protect democratic norms and expand civic participation.",
-    "location": "Springfield, IL"
+    "location": "Springfield, IL",
+    "status": "Incumbent"
   },
   {
     "id": "9",
@@ -172,7 +183,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Serving Kentucky as Governor, Andy champions democratic values and good governance.",
-    "location": "Frankfort, KY"
+    "location": "Frankfort, KY",
+    "status": "Incumbent"
   },
   {
     "id": "10",
@@ -190,7 +202,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Serving Maryland as Governor, Wes champions democratic values and good governance.",
-    "location": "Annapolis, MD"
+    "location": "Annapolis, MD",
+    "status": "Incumbent"
   },
   {
     "id": "11",
@@ -208,7 +221,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Maura serves as Governor for Massachusetts, working to strengthen democratic institutions and civic engagement.",
-    "location": "Boston, MA"
+    "location": "Boston, MA",
+    "status": "Incumbent"
   },
   {
     "id": "12",
@@ -226,7 +240,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Serving Michigan as Governor, Gretchen champions democratic values and good governance.",
-    "location": "Lansing, MI"
+    "location": "Lansing, MI",
+    "status": "Incumbent"
   },
   {
     "id": "13",
@@ -244,7 +259,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Josh works tirelessly as Governor to protect democratic norms and expand civic participation.",
-    "location": "Raleigh, NC"
+    "location": "Raleigh, NC",
+    "status": "Incumbent"
   },
   {
     "id": "14",
@@ -262,7 +278,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "As Governor, Amy is committed to defending voting rights and ensuring fair elections in Ohio.",
-    "location": "Columbus, OH"
+    "location": "Columbus, OH",
+    "status": "Challenger"
   },
   {
     "id": "15",
@@ -280,7 +297,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Josh brings dedicated leadership to the role of Governor, focusing on transparency and accountability.",
-    "location": "Harrisburg, PA"
+    "location": "Harrisburg, PA",
+    "status": "Incumbent"
   },
   {
     "id": "16",
@@ -298,7 +316,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Spencer serves as Governor for Utah, working to strengthen democratic institutions and civic engagement.",
-    "location": "Salt Lake City, UT"
+    "location": "Salt Lake City, UT",
+    "status": "Incumbent"
   },
   {
     "id": "17",
@@ -316,7 +335,8 @@ export const people: Person[] = [
     ],
     "title": "Governor",
     "bio": "Phil serves as Governor for Vermont, working to strengthen democratic institutions and civic engagement.",
-    "location": "Montpelier, VT"
+    "location": "Montpelier, VT",
+    "status": "Incumbent"
   },
   {
     "id": "18",
@@ -334,7 +354,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, AR-2",
     "bio": "As U.S. Representative, AR-2, French is committed to defending voting rights and ensuring fair elections in AR-2.",
-    "location": "Little Rock, AR"
+    "location": "Little Rock, AR",
+    "status": "Incumbent"
   },
   {
     "id": "19",
@@ -352,7 +373,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, AZ-4",
     "bio": "Greg works tirelessly as U.S. Representative, AZ-4 to protect democratic norms and expand civic participation.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Incumbent"
   },
   {
     "id": "20",
@@ -370,7 +392,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, AZ-6",
     "bio": "JoAnna serves as U.S. Representative, AZ-6 for AZ-6, working to strengthen democratic institutions and civic engagement.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Challenger"
   },
   {
     "id": "21",
@@ -388,7 +411,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CA-13",
     "bio": "Adam works tirelessly as U.S. Representative, CA-13 to protect democratic norms and expand civic participation.",
-    "location": "Modesto, CA"
+    "location": "Modesto, CA",
+    "status": "Incumbent"
   },
   {
     "id": "22",
@@ -406,7 +430,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CA-16",
     "bio": "Sam brings dedicated leadership to the role of U.S. Representative, CA-16, focusing on transparency and accountability.",
-    "location": "San Jose, CA"
+    "location": "San Jose, CA",
+    "status": "Incumbent"
   },
   {
     "id": "23",
@@ -424,7 +449,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CA-27",
     "bio": "George works tirelessly as U.S. Representative, CA-27 to protect democratic norms and expand civic participation.",
-    "location": "Los Angeles, CA"
+    "location": "Los Angeles, CA",
+    "status": "Incumbent"
   },
   {
     "id": "24",
@@ -442,7 +468,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CA-4",
     "bio": "Eric serves as U.S. Representative, CA-4 for CA-4, working to strengthen democratic institutions and civic engagement.",
-    "location": "Sacramento, CA"
+    "location": "Sacramento, CA",
+    "status": "Challenger"
   },
   {
     "id": "25",
@@ -460,7 +487,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CA-9",
     "bio": "Josh serves as U.S. Representative, CA-9 for CA-9, working to strengthen democratic institutions and civic engagement.",
-    "location": "Stockton, CA"
+    "location": "Stockton, CA",
+    "status": "Incumbent"
   },
   {
     "id": "26",
@@ -478,7 +506,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CO-2",
     "bio": "Joe serves as U.S. Representative, CO-2 for CO-2, working to strengthen democratic institutions and civic engagement.",
-    "location": "Boulder, CO"
+    "location": "Boulder, CO",
+    "status": "Incumbent"
   },
   {
     "id": "27",
@@ -496,7 +525,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CO-6",
     "bio": "Jason brings dedicated leadership to the role of U.S. Representative, CO-6, focusing on transparency and accountability.",
-    "location": "Aurora, CO"
+    "location": "Aurora, CO",
+    "status": "Incumbent"
   },
   {
     "id": "28",
@@ -514,7 +544,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CO-7",
     "bio": "Brittany serves as U.S. Representative, CO-7 for CO-7, working to strengthen democratic institutions and civic engagement.",
-    "location": "Denver, CO"
+    "location": "Denver, CO",
+    "status": "Incumbent"
   },
   {
     "id": "29",
@@ -532,7 +563,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, CT-4",
     "bio": "Serving CT-4 as U.S. Representative, CT-4, Jim champions democratic values and good governance.",
-    "location": "Bridgeport, CT"
+    "location": "Bridgeport, CT",
+    "status": "Incumbent"
   },
   {
     "id": "30",
@@ -550,7 +582,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, GA-6",
     "bio": "Lucy brings dedicated leadership to the role of U.S. Representative, GA-6, focusing on transparency and accountability.",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "status": "Incumbent"
   },
   {
     "id": "31",
@@ -568,7 +601,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, IL-13",
     "bio": "As U.S. Representative, IL-13, Nikki is committed to defending voting rights and ensuring fair elections in IL-13.",
-    "location": "Springfield, IL"
+    "location": "Springfield, IL",
+    "status": "Incumbent"
   },
   {
     "id": "32",
@@ -586,7 +620,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, IL-14",
     "bio": "Lauren works tirelessly as U.S. Representative, IL-14 to protect democratic norms and expand civic participation.",
-    "location": "Naperville, IL"
+    "location": "Naperville, IL",
+    "status": "Incumbent"
   },
   {
     "id": "33",
@@ -604,7 +639,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, IL-6",
     "bio": "Sean works tirelessly as U.S. Representative, IL-6 to protect democratic norms and expand civic participation.",
-    "location": "Chicago, IL"
+    "location": "Chicago, IL",
+    "status": "Incumbent"
   },
   {
     "id": "34",
@@ -622,7 +658,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, MA-3",
     "bio": "Lori serves as U.S. Representative, MA-3 for MA-3, working to strengthen democratic institutions and civic engagement.",
-    "location": "Lowell, MA"
+    "location": "Lowell, MA",
+    "status": "Incumbent"
   },
   {
     "id": "35",
@@ -640,7 +677,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, MA-4",
     "bio": "As U.S. Representative, MA-4, Jake is committed to defending voting rights and ensuring fair elections in MA-4.",
-    "location": "Newton, MA"
+    "location": "Newton, MA",
+    "status": "Incumbent"
   },
   {
     "id": "36",
@@ -658,7 +696,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, MI-7",
     "bio": "Serving MI-7 as U.S. Representative, MI-7, Bridget champions democratic values and good governance.",
-    "location": "Lansing, MI"
+    "location": "Lansing, MI",
+    "status": "Challenger"
   },
   {
     "id": "37",
@@ -676,7 +715,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, MI-8",
     "bio": "Kristen brings dedicated leadership to the role of U.S. Representative, MI-8, focusing on transparency and accountability.",
-    "location": "Flint, MI"
+    "location": "Flint, MI",
+    "status": "Incumbent"
   },
   {
     "id": "38",
@@ -694,7 +734,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NC-1",
     "bio": "Don brings dedicated leadership to the role of U.S. Representative, NC-1, focusing on transparency and accountability.",
-    "location": "Rocky Mount, NC"
+    "location": "Rocky Mount, NC",
+    "status": "Incumbent"
   },
   {
     "id": "39",
@@ -712,7 +753,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NH-2",
     "bio": "Maggie brings dedicated leadership to the role of U.S. Representative, NH-2, focusing on transparency and accountability.",
-    "location": "Concord, NH"
+    "location": "Concord, NH",
+    "status": "Incumbent"
   },
   {
     "id": "40",
@@ -730,7 +772,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NJ-7",
     "bio": "As U.S. Representative, NJ-7, Rebecca is committed to defending voting rights and ensuring fair elections in NJ-7.",
-    "location": "Newark, NJ"
+    "location": "Newark, NJ",
+    "status": "Challenger"
   },
   {
     "id": "41",
@@ -748,7 +791,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-10",
     "bio": "Dan brings dedicated leadership to the role of U.S. Representative, NY-10, focusing on transparency and accountability.",
-    "location": "Manhattan, NY"
+    "location": "Manhattan, NY",
+    "status": "Incumbent"
   },
   {
     "id": "42",
@@ -766,7 +810,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-15",
     "bio": "Ritchie brings dedicated leadership to the role of U.S. Representative, NY-15, focusing on transparency and accountability.",
-    "location": "Bronx, NY"
+    "location": "Bronx, NY",
+    "status": "Incumbent"
   },
   {
     "id": "43",
@@ -784,7 +829,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-17",
     "bio": "Cait serves as U.S. Representative, NY-17 for NY-17, working to strengthen democratic institutions and civic engagement.",
-    "location": "Hudson Valley, NY"
+    "location": "Hudson Valley, NY",
+    "status": "Challenger"
   },
   {
     "id": "44",
@@ -802,7 +848,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-18",
     "bio": "Pat works tirelessly as U.S. Representative, NY-18 to protect democratic norms and expand civic participation.",
-    "location": "Poughkeepsie, NY"
+    "location": "Poughkeepsie, NY",
+    "status": "Incumbent"
   },
   {
     "id": "45",
@@ -820,7 +867,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-19",
     "bio": "Serving NY-19 as U.S. Representative, NY-19, Josh champions democratic values and good governance.",
-    "location": "Ithaca, NY"
+    "location": "Ithaca, NY",
+    "status": "Incumbent"
   },
   {
     "id": "46",
@@ -838,7 +886,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-3",
     "bio": "As U.S. Representative, NY-3, Tom is committed to defending voting rights and ensuring fair elections in NY-3.",
-    "location": "Long Island, NY"
+    "location": "Long Island, NY",
+    "status": "Incumbent"
   },
   {
     "id": "47",
@@ -856,7 +905,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-4",
     "bio": "Laura works tirelessly as U.S. Representative, NY-4 to protect democratic norms and expand civic participation.",
-    "location": "Long Island, NY"
+    "location": "Long Island, NY",
+    "status": "Incumbent"
   },
   {
     "id": "48",
@@ -874,7 +924,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, NY-8",
     "bio": "As U.S. Representative, NY-8, Hakeem is committed to defending voting rights and ensuring fair elections in NY-8.",
-    "location": "Brooklyn, NY"
+    "location": "Brooklyn, NY",
+    "status": "Incumbent"
   },
   {
     "id": "49",
@@ -892,7 +943,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, OH-13",
     "bio": "As U.S. Representative, OH-13, Emilia is committed to defending voting rights and ensuring fair elections in OH-13.",
-    "location": "Akron, OH"
+    "location": "Akron, OH",
+    "status": "Incumbent"
   },
   {
     "id": "50",
@@ -910,7 +962,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, OR-5",
     "bio": "As U.S. Representative, OR-5, Janelle is committed to defending voting rights and ensuring fair elections in OR-5.",
-    "location": "Salem, OR"
+    "location": "Salem, OR",
+    "status": "Incumbent"
   },
   {
     "id": "51",
@@ -928,7 +981,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, OR-6",
     "bio": "Andrewa serves as U.S. Representative, OR-6 for OR-6, working to strengthen democratic institutions and civic engagement.",
-    "location": "Portland, OR"
+    "location": "Portland, OR",
+    "status": "Incumbent"
   },
   {
     "id": "52",
@@ -946,7 +1000,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, PA-10",
     "bio": "As U.S. Representative, PA-10, Janelle is committed to defending voting rights and ensuring fair elections in PA-10.",
-    "location": "Harrisburg, PA"
+    "location": "Harrisburg, PA",
+    "status": "Challenger"
   },
   {
     "id": "53",
@@ -964,7 +1019,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, PA-2",
     "bio": "Brendan serves as U.S. Representative, PA-2 for PA-2, working to strengthen democratic institutions and civic engagement.",
-    "location": "Philadelphia, PA"
+    "location": "Philadelphia, PA",
+    "status": "Incumbent"
   },
   {
     "id": "54",
@@ -982,7 +1038,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, PA-6",
     "bio": "Chrissy works tirelessly as U.S. Representative, PA-6 to protect democratic norms and expand civic participation.",
-    "location": "Reading, PA"
+    "location": "Reading, PA",
+    "status": "Incumbent"
   },
   {
     "id": "55",
@@ -1000,7 +1057,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, PA-8",
     "bio": "Paige brings dedicated leadership to the role of U.S. Representative, PA-8, focusing on transparency and accountability.",
-    "location": "Scranton, PA"
+    "location": "Scranton, PA",
+    "status": "Challenger"
   },
   {
     "id": "56",
@@ -1018,7 +1076,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, RI-2",
     "bio": "Serving RI-2 as U.S. Representative, RI-2, Seth champions democratic values and good governance.",
-    "location": "Providence, RI"
+    "location": "Providence, RI",
+    "status": "Incumbent"
   },
   {
     "id": "57",
@@ -1035,7 +1094,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, TX-33",
     "bio": "Colin serves as U.S. Representative, TX-33 for TX-33, working to strengthen democratic institutions and civic engagement.",
-    "location": "Dallas, TX"
+    "location": "Dallas, TX",
+    "status": "Challenger"
   },
   {
     "id": "58",
@@ -1052,7 +1112,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, TX-34",
     "bio": "As U.S. Representative, TX-34, Vicente is committed to defending voting rights and ensuring fair elections in TX-34.",
-    "location": "McAllen, TX"
+    "location": "McAllen, TX",
+    "status": "Incumbent"
   },
   {
     "id": "59",
@@ -1070,7 +1131,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, VA-07",
     "bio": "Eugene serves as U.S. Representative, VA-07 for VA-07, working to strengthen democratic institutions and civic engagement.",
-    "location": "Richmond, VA"
+    "location": "Richmond, VA",
+    "status": "Incumbent"
   },
   {
     "id": "60",
@@ -1088,7 +1150,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, WA-03",
     "bio": "Marie serves as U.S. Representative, WA-03 for WA-03, working to strengthen democratic institutions and civic engagement.",
-    "location": "Vancouver, WA"
+    "location": "Vancouver, WA",
+    "status": "Incumbent"
   },
   {
     "id": "61",
@@ -1106,7 +1169,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative, WI-03",
     "bio": "As U.S. Representative, WI-03, Rebecca is committed to defending voting rights and ensuring fair elections in WI-03.",
-    "location": "La Crosse, WI"
+    "location": "La Crosse, WI",
+    "status": "Challenger"
   },
   {
     "id": "62",
@@ -1123,7 +1187,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Representative",
     "bio": "Serving  as U.S. Representative, Greg champions democratic values and good governance.",
-    "location": "Washington, DC"
+    "location": "Washington, DC",
+    "status": "Incumbent"
   },
   {
     "id": "63",
@@ -1141,7 +1206,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, Mary is committed to defending voting rights and ensuring fair elections in Alaska.",
-    "location": "Juneau, AK"
+    "location": "Juneau, AK",
+    "status": "Challenger"
   },
   {
     "id": "64",
@@ -1159,7 +1225,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Lisa works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Juneau, AK"
+    "location": "Juneau, AK",
+    "status": "Incumbent"
   },
   {
     "id": "65",
@@ -1177,7 +1244,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Serving Arizona as U.S. Senator, Mark champions democratic values and good governance.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Incumbent"
   },
   {
     "id": "66",
@@ -1195,7 +1263,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Ruben works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Incumbent"
   },
   {
     "id": "67",
@@ -1213,7 +1282,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, John is committed to defending voting rights and ensuring fair elections in Colorado.",
-    "location": "Denver, CO"
+    "location": "Denver, CO",
+    "status": "Incumbent"
   },
   {
     "id": "68",
@@ -1231,7 +1301,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, Chris is committed to defending voting rights and ensuring fair elections in Deleware.",
-    "location": "Dover, DE"
+    "location": "Dover, DE",
+    "status": "Incumbent"
   },
   {
     "id": "69",
@@ -1249,7 +1320,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, Hector is committed to defending voting rights and ensuring fair elections in Florida.",
-    "location": "Tallahassee, FL"
+    "location": "Tallahassee, FL",
+    "status": "Challenger"
   },
   {
     "id": "70",
@@ -1267,7 +1339,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Jon serves as U.S. Senator for Georgia, working to strengthen democratic institutions and civic engagement.",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "status": "Incumbent"
   },
   {
     "id": "71",
@@ -1285,7 +1358,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Raja works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Springfield, IL"
+    "location": "Springfield, IL",
+    "status": "Challenger"
   },
   {
     "id": "72",
@@ -1303,7 +1377,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Seth works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Boston, MA"
+    "location": "Boston, MA",
+    "status": "Challenger"
   },
   {
     "id": "73",
@@ -1321,7 +1396,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Elissa serves as U.S. Senator for Michigan, working to strengthen democratic institutions and civic engagement.",
-    "location": "Lansing, MI"
+    "location": "Lansing, MI",
+    "status": "Incumbent"
   },
   {
     "id": "74",
@@ -1339,7 +1415,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, Angie is committed to defending voting rights and ensuring fair elections in Minnesota.",
-    "location": "St. Paul, MN"
+    "location": "St. Paul, MN",
+    "status": "Challenger"
   },
   {
     "id": "75",
@@ -1357,7 +1434,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, Dan is committed to defending voting rights and ensuring fair elections in Nebraska.",
-    "location": "Lincoln, NE"
+    "location": "Lincoln, NE",
+    "status": "Challenger"
   },
   {
     "id": "76",
@@ -1375,7 +1453,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Roy works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Raleigh, NC"
+    "location": "Raleigh, NC",
+    "status": "Challenger"
   },
   {
     "id": "77",
@@ -1393,7 +1472,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "As U.S. Senator, Sherrod is committed to defending voting rights and ensuring fair elections in Ohio (SE).",
-    "location": "Washington, DC"
+    "location": "Washington, DC",
+    "status": "Challenger"
   },
   {
     "id": "78",
@@ -1411,7 +1491,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Serving Rhode Island as U.S. Senator, Jack champions democratic values and good governance.",
-    "location": "Providence, RI"
+    "location": "Providence, RI",
+    "status": "Incumbent"
   },
   {
     "id": "79",
@@ -1429,7 +1510,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Mark works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Richmond, VA"
+    "location": "Richmond, VA",
+    "status": "Incumbent"
   },
   {
     "id": "80",
@@ -1447,7 +1529,8 @@ export const people: Person[] = [
     ],
     "title": "U.S. Senator",
     "bio": "Tim works tirelessly as U.S. Senator to protect democratic norms and expand civic participation.",
-    "location": "Richmond, VA"
+    "location": "Richmond, VA",
+    "status": "Incumbent"
   },
   {
     "id": "81",
@@ -1465,7 +1548,8 @@ export const people: Person[] = [
     ],
     "title": "Secretary of State",
     "bio": "Adrian brings dedicated leadership to the role of Secretary of State, focusing on transparency and accountability.",
-    "location": "Phoenix, AZ"
+    "location": "Phoenix, AZ",
+    "status": "Incumbent"
   },
   {
     "id": "82",
@@ -1483,7 +1567,8 @@ export const people: Person[] = [
     ],
     "title": "Secretary of State",
     "bio": "Dana serves as Secretary of State for Georgia, working to strengthen democratic institutions and civic engagement.",
-    "location": "Atlanta, GA"
+    "location": "Atlanta, GA",
+    "status": "Challenger"
   },
   {
     "id": "83",
@@ -1501,7 +1586,8 @@ export const people: Person[] = [
     ],
     "title": "Secretary of State",
     "bio": "Phil works tirelessly as Secretary of State to protect democratic norms and expand civic participation.",
-    "location": "Boise, ID"
+    "location": "Boise, ID",
+    "status": "Incumbent"
   },
   {
     "id": "84",
@@ -1519,7 +1605,8 @@ export const people: Person[] = [
     ],
     "title": "Secretary of State",
     "bio": "Serving Michigan as Secretary of State, Barbara champions democratic values and good governance.",
-    "location": "Lansing, MI"
+    "location": "Lansing, MI",
+    "status": "Challenger"
   },
   {
     "id": "85",
@@ -1537,7 +1624,8 @@ export const people: Person[] = [
     ],
     "title": "Secretary of State",
     "bio": "Sarah brings dedicated leadership to the role of Secretary of State, focusing on transparency and accountability.",
-    "location": "Madison, WI"
+    "location": "Madison, WI",
+    "status": "Challenger"
   },
   {
     "id": "86",
@@ -1555,7 +1643,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. serves as State Senator for Indiana, working to strengthen democratic institutions and civic engagement.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "87",
@@ -1573,7 +1662,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. serves as State Senator for Indiana, working to strengthen democratic institutions and civic engagement.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "88",
@@ -1591,7 +1681,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Serving Indiana as State Senator, Sen. champions democratic values and good governance.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "89",
@@ -1609,7 +1700,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Serving Indiana as State Senator, Sen. champions democratic values and good governance.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "90",
@@ -1627,7 +1719,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. serves as State Senator for Indiana, working to strengthen democratic institutions and civic engagement.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "91",
@@ -1645,7 +1738,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Serving Indiana as State Senator, Sen. champions democratic values and good governance.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "92",
@@ -1663,7 +1757,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. works tirelessly as State Senator to protect democratic norms and expand civic participation.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "93",
@@ -1681,7 +1776,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. serves as State Senator for Indiana, working to strengthen democratic institutions and civic engagement.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "94",
@@ -1699,7 +1795,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. works tirelessly as State Senator to protect democratic norms and expand civic participation.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "95",
@@ -1717,7 +1814,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. brings dedicated leadership to the role of State Senator, focusing on transparency and accountability.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "96",
@@ -1735,7 +1833,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. works tirelessly as State Senator to protect democratic norms and expand civic participation.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "97",
@@ -1753,7 +1852,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "As State Senator, Sen. is committed to defending voting rights and ensuring fair elections in Indiana.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "98",
@@ -1771,7 +1871,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Serving Indiana as State Senator, Sen. champions democratic values and good governance.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "99",
@@ -1789,7 +1890,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. brings dedicated leadership to the role of State Senator, focusing on transparency and accountability.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "100",
@@ -1807,7 +1909,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. serves as State Senator for Indiana, working to strengthen democratic institutions and civic engagement.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "101",
@@ -1825,7 +1928,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. works tirelessly as State Senator to protect democratic norms and expand civic participation.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "102",
@@ -1843,7 +1947,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Serving Indiana as State Senator, Sen. champions democratic values and good governance.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "103",
@@ -1861,7 +1966,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "As State Senator, Sen. is committed to defending voting rights and ensuring fair elections in Indiana.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "104",
@@ -1879,7 +1985,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Serving Indiana as State Senator, Sen. champions democratic values and good governance.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "105",
@@ -1897,7 +2004,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "As State Senator, Sen. is committed to defending voting rights and ensuring fair elections in Indiana.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   },
   {
     "id": "106",
@@ -1915,7 +2023,8 @@ export const people: Person[] = [
     ],
     "title": "State Senator",
     "bio": "Sen. works tirelessly as State Senator to protect democratic norms and expand civic participation.",
-    "location": "Indianapolis, IN"
+    "location": "Indianapolis, IN",
+    "status": "Incumbent"
   }
 ];
 

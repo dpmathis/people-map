@@ -113,6 +113,19 @@ export default function PersonDetail({ person, onClose }: PersonDetailProps) {
           {person.location}
         </p>
 
+        {/* Status Badge */}
+        <div className="mt-2">
+          <span
+            className="px-3 py-1 text-xs font-semibold uppercase tracking-wide"
+            style={{
+              background: person.status === 'Challenger' ? 'var(--gold)' : 'var(--navy)',
+              color: 'var(--white)',
+            }}
+          >
+            {person.status}
+          </span>
+        </div>
+
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mt-3">
           {person.tags.map((tag) => (

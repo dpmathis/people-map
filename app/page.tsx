@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { people, allTags, Person } from "@/data/people";
 import TagFilter from "@/components/TagFilter";
 import PersonDetail from "@/components/PersonDetail";
+import Legend from "@/components/Legend";
 
 // Dynamically import Map to avoid SSR issues with Leaflet
 const Map = dynamic(() => import("@/components/Map"), {
@@ -27,6 +28,16 @@ export default function Home() {
       selectedTags.some((tag) => person.tags.includes(tag))
     );
   }, [selectedTags]);
+
+  // Count incumbents and challengers in filtered results
+  const incumbentCount = useMemo(() =>
+    filteredPeople.filter(p => p.status === 'Incumbent').length,
+    [filteredPeople]
+  );
+  const challengerCount = useMemo(() =>
+    filteredPeople.filter(p => p.status === 'Challenger').length,
+    [filteredPeople]
+  );
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags((prev) =>
@@ -81,6 +92,12 @@ export default function Home() {
           className="absolute top-4 left-4 bottom-4 z-[1000] w-72 space-y-4 overflow-y-auto"
           style={{ maxHeight: 'calc(100% - 32px)' }}
         >
+          {/* Legend */}
+          <Legend
+            incumbentCount={incumbentCount}
+            challengerCount={challengerCount}
+          />
+
           {/* Tag Filter */}
           <TagFilter
             tags={allTags}

@@ -48,7 +48,8 @@ for (let i = 1; i < lines.length; i++) {
     title: person.title || '',
     bio: person.bio || '',
     email: person.email || undefined,
-    location: person.location || ''
+    location: person.location || '',
+    status: person.status || 'Incumbent'
   };
 
   // Validate required fields
@@ -63,7 +64,9 @@ for (let i = 1; i < lines.length; i++) {
 console.log(`Parsed ${people.length} people`);
 
 // Generate TypeScript file
-const output = `export interface Person {
+const output = `export type PersonStatus = 'Incumbent' | 'Challenger';
+
+export interface Person {
   id: string;
   name: string;
   photo: string;
@@ -74,6 +77,7 @@ const output = `export interface Person {
   bio: string;
   email?: string;
   location: string;
+  status: PersonStatus;
 }
 
 export const people: Person[] = ${JSON.stringify(people, null, 2)};

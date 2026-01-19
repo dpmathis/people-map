@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
-import { Person } from "@/data/people";
+import { Person, PersonStatus } from "@/data/people";
 import "leaflet/dist/leaflet.css";
 
 interface MapProps {
@@ -28,16 +28,17 @@ function isPlaceholderPhoto(photoUrl: string): boolean {
 }
 
 // Create a custom icon for each person's photo or initials
-function createPhotoIcon(photoUrl: string, name: string, isSelected: boolean) {
+function createPhotoIcon(photoUrl: string, name: string, status: PersonStatus, isSelected: boolean) {
   const initials = getInitials(name);
   const isPlaceholder = isPlaceholderPhoto(photoUrl);
+  const statusClass = status === 'Challenger' ? 'challenger' : 'incumbent';
 
   if (isPlaceholder) {
     // Show initials instead of placeholder
     return L.divIcon({
       className: "custom-marker",
       html: `
-        <div class="marker-container marker-initials ${isSelected ? "selected" : ""}">
+        <div class="marker-container marker-initials ${statusClass} ${isSelected ? "selected" : ""}">
           <span class="initials">${initials}</span>
         </div>
       `,
@@ -51,7 +52,7 @@ function createPhotoIcon(photoUrl: string, name: string, isSelected: boolean) {
   return L.divIcon({
     className: "custom-marker",
     html: `
-      <div class="marker-container ${isSelected ? "selected" : ""}">
+      <div class="marker-container ${statusClass} ${isSelected ? "selected" : ""}">
         <img
           src="${photoUrl}"
           alt="${name}"
@@ -109,20 +110,42 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           height: 50px;
           border-radius: 50%;
           overflow: hidden;
-          border: 3px solid #0E2344;
+          border: 4px solid #0E2344;
           box-shadow: 0 2px 10px rgba(14, 35, 68, 0.4);
           transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
           cursor: pointer;
           background: #F8F6F1;
         }
+        /* Incumbent - Navy border */
+        .marker-container.incumbent {
+          border-color: #0E2344;
+        }
+        /* Challenger - Gold border */
+        .marker-container.challenger {
+          border-color: #BDAA77;
+          box-shadow: 0 2px 10px rgba(189, 170, 119, 0.5);
+        }
         .marker-container:hover {
           transform: scale(1.1);
+        }
+        .marker-container.incumbent:hover {
+          border-color: #0E2344;
+          box-shadow: 0 4px 15px rgba(14, 35, 68, 0.5);
+        }
+        .marker-container.challenger:hover {
           border-color: #BDAA77;
+          box-shadow: 0 4px 15px rgba(189, 170, 119, 0.6);
         }
         .marker-container.selected {
-          border-color: #BDAA77;
           transform: scale(1.15);
-          box-shadow: 0 4px 15px rgba(189, 170, 119, 0.6);
+        }
+        .marker-container.incumbent.selected {
+          border-color: #0E2344;
+          box-shadow: 0 4px 15px rgba(14, 35, 68, 0.6);
+        }
+        .marker-container.challenger.selected {
+          border-color: #BDAA77;
+          box-shadow: 0 4px 15px rgba(189, 170, 119, 0.7);
         }
         .marker-container img {
           width: 100%;
@@ -135,6 +158,9 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           justify-content: center;
           background: #0E2344;
         }
+        .marker-container.marker-initials.challenger {
+          background: #BDAA77;
+        }
         .marker-container .initials,
         .marker-container .initials-fallback {
           color: #FFFFFF;
@@ -146,7 +172,7 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #0E2344;
+          background: inherit;
         }
         .leaflet-popup-content-wrapper {
           border-radius: 0;
@@ -178,7 +204,7 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           <Marker
             key={person.id}
             position={[person.lat, person.lng]}
-            icon={createPhotoIcon(person.photo, person.name, selectedPerson?.id === person.id)}
+            icon={createPhotoIcon(person.photo, person.name, person.status, selectedPerson?.id === person.id)}
             eventHandlers={{
               click: () => onPersonClick(person),
             }}
@@ -187,6 +213,7 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
               <div className="text-center">
                 <p className="font-bold" style={{ color: '#0E2344' }}>{person.name}</p>
                 <p className="text-sm" style={{ color: '#BDAA77' }}>{person.title}</p>
+                <p className="text-xs mt-1" style={{ color: '#333333' }}>{person.status}</p>
               </div>
             </Popup>
           </Marker>
