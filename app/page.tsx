@@ -77,7 +77,10 @@ export default function Home() {
         </div>
 
         {/* Sidebar */}
-        <div className="absolute top-4 left-4 z-[1000] w-72 space-y-4">
+        <div
+          className="absolute top-4 left-4 bottom-4 z-[1000] w-72 space-y-4 overflow-y-auto"
+          style={{ maxHeight: 'calc(100% - 32px)' }}
+        >
           {/* Tag Filter */}
           <TagFilter
             tags={allTags}
