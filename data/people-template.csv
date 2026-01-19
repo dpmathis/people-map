@@ -1,0 +1,4 @@
+id,name,title,location,lat,lng,tags,bio,email,photo
+1,Sarah Chen,Senior Engineer,"San Francisco, CA",37.7749,-122.4194,"engineering,leadership",Sarah leads our West Coast engineering team.,sarah@example.com,sarah-chen.jpg
+2,Marcus Johnson,Sales Director,"New York, NY",40.7128,-74.0060,"sales,leadership",Marcus has grown our East Coast presence significantly.,marcus@example.com,marcus-johnson.jpg
+3,Emily Rodriguez,Creative Director,"Los Angeles, CA",34.0522,-118.2437,"marketing,creative",Emily brings brands to life with visual storytelling.,emily@example.com,emily-rodriguez.jpg
