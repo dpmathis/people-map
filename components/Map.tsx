@@ -166,7 +166,7 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
           color: #FFFFFF;
           font-weight: 700;
           font-size: 16px;
-          font-family: "Nunito Sans", Arial, sans-serif;
+          font-family: "Source Sans Pro", Arial, sans-serif;
           width: 100%;
           height: 100%;
           display: flex;
@@ -182,7 +182,7 @@ export default function Map({ people, onPersonClick, selectedPerson }: MapProps)
         .leaflet-popup-content {
           margin: 12px 16px;
           color: #0E2344;
-          font-family: "Nunito Sans", Arial, sans-serif;
+          font-family: "Source Sans Pro", Arial, sans-serif;
         }
         .leaflet-popup-tip {
           background: white;

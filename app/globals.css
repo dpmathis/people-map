@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700&display=swap');
 
 :root {
   /* Leadership Now PAC Brand Colors */
@@ -34,7 +34,7 @@
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-charcoal: var(--charcoal);
-  --font-sans: "Nunito Sans", Arial, sans-serif;
+  --font-sans: "Source Sans Pro", Arial, sans-serif;
 }
 
 html,
@@ -49,7 +49,7 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Nunito Sans", Arial, sans-serif;
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
 /* Leaflet container must have explicit height */

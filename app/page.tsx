@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { people, allTags, Person } from "@/data/people";
 import TagFilter from "@/components/TagFilter";
 import PersonDetail from "@/components/PersonDetail";
@@ -60,18 +61,19 @@ export default function Home() {
   return (
     <div className="h-screen w-screen flex flex-col">
       {/* Header */}
-      <header className="px-6 py-4" style={{ background: 'var(--navy)' }}>
+      <header className="px-6 py-3" style={{ background: 'var(--navy)' }}>
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 flex items-center justify-center" style={{ background: 'var(--gold)' }}>
-            <span className="text-white font-bold text-lg">LN</span>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold uppercase tracking-wide" style={{ color: 'var(--white)' }}>
-              Leadership Now Candidate Map
+          <Image
+            src="/logo-white.png"
+            alt="Leadership Now PAC"
+            width={200}
+            height={40}
+            className="h-10 w-auto"
+          />
+          <div className="border-l border-white/30 pl-4">
+            <h1 className="text-lg font-semibold tracking-wide" style={{ color: 'var(--white)', fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}>
+              Candidate Map
             </h1>
-            <p className="text-sm" style={{ color: 'var(--gold)' }}>
-              Explore our endorsed candidates across the country
-            </p>
           </div>
         </div>
       </header>
